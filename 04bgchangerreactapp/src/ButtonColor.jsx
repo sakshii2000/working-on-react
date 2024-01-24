@@ -6,7 +6,7 @@ function ButtonColor({ color, setColour }) {
       className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
       style={{ backgroundColor: color }}
       onClick={(e) => {
-        setColour(e.target.style.backgroundColor);
+        setColour(color);
       }}>
       {color}
     </button>
