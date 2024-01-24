@@ -1,10 +1,16 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-function ButtonColor({color}) {
-
+function ButtonColor({ color, setColour }) {
   return (
-    <button onClick= {changeBackground}className='outline-none px-4 py-1 rounded-full text-white shadow-lg' style={{backgroundColor: color}}>{color}</button>
-  )
+    <button
+      className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+      style={{ backgroundColor: color }}
+      onClick={(e) => {
+        setColour(e.target.style.backgroundColor);
+      }}>
+      {color}
+    </button>
+  );
 }
 
-export default ButtonColor
+export default ButtonColor;
